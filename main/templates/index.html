@@ -1,0 +1,35 @@
+{% load staticfiles %}
+
+<head>
+	<link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'style.css' %}" rel="stylesheet">
+    <script>
+
+    var djangoArr = {{ imgArr|safe }};
+
+    </script>
+    <script type="text/javascript" src="{% static 'jquery-3.1.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'scripts.js' %}"></script>
+
+
+	<title>Daily Obama</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <h1 class="text-center">Daily <img src="static/img/obama-2012-logo.png"" height="45px">bama</h1>
+    </nav>
+
+    <div class="text-center" id="daily">
+        <img src='media/{{ imgArr.0 }}'>
+    </div>
+    
+
+    <div class="text-center">
+        <button type="button" class="btn btn-default" id="previousImage">Previous Image</button>
+        <button type="button" class="btn btn-default" id="nextImage">Next Image</button>
+    </div>
+
+    <div id="test">
+    </div>
